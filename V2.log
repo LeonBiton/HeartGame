@@ -1,0 +1,119 @@
+==14912== Memcheck, a memory error detector
+==14912== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==14912== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==14912== Command: ./run.out
+==14912== Parent PID: 14833
+==14912== 
+==14912== Invalid write of size 4
+==14912==    at 0x109FCF: destroyTrick (round.c:454)
+==14912==    by 0x10906A: runTricks (round.c:128)
+==14912==    by 0x108F92: startRound (round.c:104)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Address 0x52300f8 is 8 bytes inside a block of size 24 free'd
+==14912==    at 0x4C32D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x109FCA: destroyTrick (round.c:452)
+==14912==    by 0x10906A: runTricks (round.c:128)
+==14912==    by 0x108F92: startRound (round.c:104)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Block was alloc'd at
+==14912==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x108EC1: createTrick (round.c:84)
+==14912==    by 0x108FD1: runTricks (round.c:115)
+==14912==    by 0x108F92: startRound (round.c:104)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912== 
+==14912== Conditional jump or move depends on uninitialised value(s)
+==14912==    at 0x10A533: haveSpecificSet (player.c:166)
+==14912==    by 0x109EA5: isCpuHaveSet (round.c:410)
+==14912==    by 0x109298: throwCards (round.c:175)
+==14912==    by 0x108FE8: runTricks (round.c:116)
+==14912==    by 0x108F92: startRound (round.c:104)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Uninitialised value was created by a heap allocation
+==14912==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x108EC1: createTrick (round.c:84)
+==14912==    by 0x108FD1: runTricks (round.c:115)
+==14912==    by 0x108F92: startRound (round.c:104)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912== 
+==14912== Invalid read of size 8
+==14912==    at 0x10A861: destroyDeck (deck.c:71)
+==14912==    by 0x108F9E: startRound (round.c:105)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Address 0x522fc60 is 0 bytes inside a block of size 16 free'd
+==14912==    at 0x4C32D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x10A85C: destroyDeck (deck.c:70)
+==14912==    by 0x108F9E: startRound (round.c:105)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Block was alloc'd at
+==14912==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x10A677: createDeck (deck.c:21)
+==14912==    by 0x108F1B: startRound (round.c:94)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912== 
+==14912== Invalid write of size 4
+==14912==    at 0x10A870: destroyDeck (deck.c:73)
+==14912==    by 0x108F9E: startRound (round.c:105)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Address 0x522fc68 is 8 bytes inside a block of size 16 free'd
+==14912==    at 0x4C32D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x10A85C: destroyDeck (deck.c:70)
+==14912==    by 0x108F9E: startRound (round.c:105)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Block was alloc'd at
+==14912==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x10A677: createDeck (deck.c:21)
+==14912==    by 0x108F1B: startRound (round.c:94)
+==14912==    by 0x108B80: run (game.c:67)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912== 
+==14912== Invalid write of size 4
+==14912==    at 0x109F84: destroyRound (round.c:444)
+==14912==    by 0x108BE5: run (game.c:76)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Address 0x522fa20 is 16 bytes inside a block of size 56 free'd
+==14912==    at 0x4C32D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x109F7F: destroyRound (round.c:442)
+==14912==    by 0x108BE5: run (game.c:76)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912==  Block was alloc'd at
+==14912==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x108DFE: createRound (round.c:60)
+==14912==    by 0x108B6B: run (game.c:66)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912== 
+==14912== 
+==14912== HEAP SUMMARY:
+==14912==     in use at exit: 1,016 bytes in 25 blocks
+==14912==   total heap usage: 464 allocs, 439 frees, 16,848 bytes allocated
+==14912== 
+==14912== 72 (56 direct, 16 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 10
+==14912==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x108DFE: createRound (round.c:60)
+==14912==    by 0x108B6B: run (game.c:66)
+==14912==    by 0x10ADAE: main (main.c:13)
+==14912== 
+==14912== 944 (32 direct, 912 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
+==14912==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14912==    by 0x1089AC: createGame (game.c:30)
+==14912==    by 0x10AD9E: main (main.c:12)
+==14912== 
+==14912== LEAK SUMMARY:
+==14912==    definitely lost: 88 bytes in 2 blocks
+==14912==    indirectly lost: 928 bytes in 23 blocks
+==14912==      possibly lost: 0 bytes in 0 blocks
+==14912==    still reachable: 0 bytes in 0 blocks
+==14912==         suppressed: 0 bytes in 0 blocks
+==14912== 
+==14912== For counts of detected and suppressed errors, rerun with: -v
+==14912== ERROR SUMMARY: 372 errors from 7 contexts (suppressed: 0 from 0)
